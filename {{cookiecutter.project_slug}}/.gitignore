@@ -337,3 +337,8 @@ MailHog
 {%- if cookiecutter.use_docker == 'y' %}
 .ipython/
 {%- endif %}
+
+### Bespoke
+
+.idea/  # copy the starter
+tmp/

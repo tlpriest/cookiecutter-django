@@ -4,7 +4,7 @@
 {{cookiecutter.description}}
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg?logo=cookiecutter
-     :target: https://github.com/cookiecutter/cookiecutter-django/
+     :target: https://github.com/bespoke-creations/cookiecutter-django/
      :alt: Built with Cookiecutter Django
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
      :target: https://github.com/ambv/black
@@ -14,12 +14,17 @@
 :License: {{cookiecutter.open_source_license}}
 {%- endif %}
 
+Getting Started
+---------------
+
+If you use pyCharm, `mv assets/.idea .idea` for a configuration jump-start.
+
 Settings
 --------
 
 Moved to settings_.
 
-.. _settings: http://cookiecutter-django.readthedocs.io/en/latest/settings.html
+.. _settings: http://tlpriest-cookiecutter-django.readthedocs.io/en/latest/settings.html
 
 Basic Commands
 --------------
@@ -65,7 +70,7 @@ Live reloading and Sass CSS compilation
 
 Moved to `Live reloading and SASS compilation`_.
 
-.. _`Live reloading and SASS compilation`: http://cookiecutter-django.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
+.. _`Live reloading and SASS compilation`: http://tlpriest-cookiecutter-django.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
 
 {%- if cookiecutter.use_celery == "y" %}
 
@@ -145,7 +150,7 @@ Heroku
 
 See detailed `cookiecutter-django Heroku documentation`_.
 
-.. _`cookiecutter-django Heroku documentation`: http://cookiecutter-django.readthedocs.io/en/latest/deployment-on-heroku.html
+.. _`cookiecutter-django Heroku documentation`: http://tlpriest-cookiecutter-django.readthedocs.io/en/latest/deployment-on-heroku.html
 {%- endif %}
 {%- if cookiecutter.use_docker.lower() == "y" %}
 
@@ -154,7 +159,7 @@ Docker
 
 See detailed `cookiecutter-django Docker documentation`_.
 
-.. _`cookiecutter-django Docker documentation`: http://cookiecutter-django.readthedocs.io/en/latest/deployment-with-docker.html
+.. _`cookiecutter-django Docker documentation`: http://tlpriest-cookiecutter-django.readthedocs.io/en/latest/deployment-with-docker.html
 {%- endif %}
 {%- if cookiecutter.custom_bootstrap_compilation == "y" %}
 Custom Bootstrap Compilation
