@@ -1,5 +1,9 @@
 version: '3'
 
+networks:
+  web:
+    external: true
+
 volumes:
   production_postgres_data: {}
   production_postgres_data_backups: {}
@@ -41,11 +45,26 @@ services:
     volumes:
       - production_traefik:/etc/traefik/acme:z
     ports:
-      - "0.0.0.0:80:80"
-      - "0.0.0.0:443:443"
-      {%- if cookiecutter.use_celery == 'y' %}
-      - "0.0.0.0:5555:5555"
-      {%- endif %}
+      - ":80"
+      - ":443"
+    external_links:
+      - traefik
+    networks:
+      - default
+      - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=web"
+      - "traefik.http.routers.{{ cookiecutter.project_slug }}.rule=HostRegexp(`{{ cookiecutter.project_slug }}.{domain:[a-z]+}.{tld:[a-z]+}`, `{host:[a-z]+}.{{ cookiecutter.project_slug }}.{domain:[a-z]+}.{tld:[a-z]+}`)"
+      - "traefik.http.routers.{{ cookiecutter.project_slug }}.priority=100"
+      - "traefik.http.routers.{{ cookiecutter.project_slug }}.entrypoints=web,websecure"
+      - "traefik.http.services.{{ cookiecutter.project_slug }}.loadbalancer.server.port=443"
+      - "traefik.http.services.{{ cookiecutter.project_slug }}.loadbalancer.server.scheme=https"
+      - "traefik.http.routers.{{ cookiecutter.project_slug }}.tls=true"
+      - "traefik.http.routers.{{ cookiecutter.project_slug }}.tls.certresolver=dnsresolver"
+      - "traefik.http.routers.{{ cookiecutter.project_slug }}.tls.domains[0].main={{ cookiecutter.project_slug }}.{{ cookiecutter.domain_name }}"
+      - "traefik.http.routers.{{ cookiecutter.project_slug }}.tls.domains[0].sans=*.{{ cookiecutter.project_slug }}.{{ cookiecutter.domain_name }}"
+      - "traefik.http.middlewares.test-compress.compress=true"
 
   redis:
     image: redis:6
