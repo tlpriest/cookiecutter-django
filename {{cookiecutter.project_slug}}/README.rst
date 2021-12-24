@@ -24,9 +24,17 @@ Then, use these commands::
     gh repo fork --clone https://github.com/bepsoke-creations/hbo.git
     mkvirtualenv -p ~/.pyenv/versions/3.9.5/bin/python hbo-py3.9.5
     stage local
+    pip install -Ur requirements/base.txt -Ur requirements/local.txt
     ./manage.py reset_db --noinput && ./manage.py migrate && ./manage.py loaddata initial_data
     ./manage.py runserver_plus
     open localhost:8000/admin/
+::
+
+You can also run the project in docker::
+
+    docker compose up -d
+    open https://{{ cookiecutter.project_slug }}.test/
+::
 
 Settings
 --------
