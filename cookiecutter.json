@@ -1,7 +1,7 @@
 {
-  "project_name": "My Awesome Project",
+  "project_name": "A Bespoke Creation",
   "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}",
-  "description": "Behold My Awesome Project!",
+  "description": "A Bespoke Creation just for you!",
   "author_name": "Bespoke Creations",
   "domain_name": "bespoke-creations.us",
   "email": "admin@{{ cookiecutter.domain_name }}",
@@ -36,10 +36,10 @@
   "mail_service": [
     "Amazon SES",
     "Mailgun",
+    "Sendgrid",
     "Mailjet",
     "Mandrill",
     "Postmark",
-    "Sendgrid",
     "SendinBlue",
     "SparkPost",
     "Other SMTP"
@@ -52,7 +52,7 @@
   "use_mailhog": "n",
   "use_sentry": "y",
   "use_whitenoise": "y",
-  "use_heroku": "n",
+  "use_heroku": "y",
   "ci_tool": [
     "Github",
     "None",
