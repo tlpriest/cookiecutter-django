@@ -347,3 +347,4 @@ vendors.js
 
 ### Bespoke
 tmp/
+.tox/
