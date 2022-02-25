@@ -10,6 +10,25 @@
 License: {{cookiecutter.open_source_license}}
 {%- endif %}
 
+## Getting Started
+
+```bash
+gh repo fork --clone=true https://github.com/bespoke-creations/{{cookiecutter.project_slug}}.git
+mkvirtualenv -p ~/.pyenv/versions/3.10.0/bin/python {{cookiecutter.project_slug}}-py3.10.0
+pre-commit install  # you are going to contribute code, right?
+pip install -U pip -Ur requirements.txt -Ur requirements/local.txt
+docker compose -f local.yml up -d postgres redis
+./manage.py collectstatic --noinput && ./manage.py migrate && ./manage.py loaddata initial_data
+./manage.py runserver_plus
+open http://localhost:8000/admin
+    user: admin
+    pass: password
+    
+# Alternatively, to run everything under docker
+docker compose -f local.yml up --build -d
+open http://localhost:8000/admin
+```
+
 ## Settings
 
 Moved to [settings](http://cookiecutter-django.readthedocs.io/en/latest/settings.html).
