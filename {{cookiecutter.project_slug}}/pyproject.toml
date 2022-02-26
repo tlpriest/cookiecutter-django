@@ -22,4 +22,4 @@ line-length = 120
 target-version = ['py39']
 
 [tool.bandit]
-target = "respeak"
+target = "{{ cookiecutter.project_slug }}"
