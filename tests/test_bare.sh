@@ -11,7 +11,7 @@ mkdir -p .cache/bare
 cd .cache/bare
 
 # create the project using the default settings in cookiecutter.json
-cookiecutter ../../ --no-input --overwrite-if-exists use_docker=n $@
+cookiecutter ../../ --no-input --overwrite-if-exists use_docker=n "$@"
 cd my_awesome_project
 
 # Install OS deps
@@ -29,6 +29,9 @@ pre-commit run --show-diff-on-failure -a
 # run the project's tests
 pytest
 
+# Make sure the check doesn't raise any warnings
+python manage.py check --fail-level WARNING
+
 if [ -f "package.json" ]
 then
     npm install
@@ -38,3 +41,5 @@ then
     fi
 fi
 
+# Generate the HTML for the documentation
+cd docs && make html

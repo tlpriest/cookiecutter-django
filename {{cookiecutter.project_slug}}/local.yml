@@ -1,8 +1,8 @@
 version: '3'
 
 volumes:
-  local_postgres_data: {}
-  local_postgres_data_backups: {}
+  {{ cookiecutter.project_slug }}_local_postgres_data: {}
+  {{ cookiecutter.project_slug }}_local_postgres_data_backups: {}
 
 services:
   django:{% if cookiecutter.use_celery == 'y' %} &django{% endif %}
@@ -10,14 +10,15 @@ services:
       context: .
       dockerfile: ./compose/local/django/Dockerfile
     image: {{ cookiecutter.project_slug }}_local_django
-    container_name: {{ cookiecutter.project_slug}}_django
+    container_name: {{ cookiecutter.project_slug }}_local_django
+#    platform: linux/x86_64
     depends_on:
-      - {{ cookiecutter.project_slug}}_postgres
+      - postgres
       {%- if cookiecutter.use_celery == 'y' %}
-      - {{ cookiecutter.project_slug}}_redis
+      - redis
       {%- endif %}
       {%- if cookiecutter.use_mailhog == 'y' %}
-      - {{ cookiecutter.project_slug}}_mailhog
+      - mailhog
       {%- endif %}
     volumes:
       - .:/app:z
@@ -33,16 +34,19 @@ services:
       context: .
       dockerfile: ./compose/production/postgres/Dockerfile
     image: {{ cookiecutter.project_slug }}_production_postgres
-    container_name: {{ cookiecutter.project_slug}}_postgres
+    container_name: {{ cookiecutter.project_slug }}_local_postgres
     volumes:
-      - local_postgres_data:/var/lib/postgresql/data:Z
-      - local_postgres_data_backups:/backups:z
+      - {{ cookiecutter.project_slug }}_local_postgres_data:/var/lib/postgresql/data:Z
+      - {{ cookiecutter.project_slug }}_local_postgres_data_backups:/backups:z
     env_file:
       - ./.envs/.local/.postgres
+    ports:
+      - "5432:5432"
 
   docs:
     image: {{ cookiecutter.project_slug }}_local_docs
-    container_name: {{ cookiecutter.project_slug}}_docs
+    container_name: {{ cookiecutter.project_slug }}_local_docs
+#    platform: linux/x86_64
     build:
       context: .
       dockerfile: ./compose/local/docs/Dockerfile
@@ -53,13 +57,13 @@ services:
       - ./config:/app/config:z
       - ./{{ cookiecutter.project_slug }}:/app/{{ cookiecutter.project_slug }}:z
     ports:
-      - "7001:7000"  # AirPlay runs on 7000 on macOS Monterey
+      - "9000:9000"
     command: /start-docs
   {%- if cookiecutter.use_mailhog == 'y' %}
 
   mailhog:
     image: mailhog/mailhog:v1.0.0
-    container_name: {{ cookiecutter.project_slug}}_mailhog
+    container_name: {{ cookiecutter.project_slug }}_local_mailhog
     ports:
       - "8025:8025"
 
@@ -68,17 +72,19 @@ services:
 
   redis:
     image: redis:6
-    container_name: {{ cookiecutter.project_slug}}_redis
+    container_name: {{ cookiecutter.project_slug }}_local_redis
+    ports:
+      - "6379:6379"
 
   celeryworker:
     <<: *django
     image: {{ cookiecutter.project_slug }}_local_celeryworker
-    container_name: {{ cookiecutter.project_slug}}_celeryworker
+    container_name: {{ cookiecutter.project_slug }}_local_celeryworker
     depends_on:
-      - {{ cookiecutter.project_slug}}_redis
-      - {{ cookiecutter.project_slug}}_postgres
+      - redis
+      - postgres
       {%- if cookiecutter.use_mailhog == 'y' %}
-      - {{ cookiecutter.project_slug}}_mailhog
+      - mailhog
       {%- endif %}
     ports: []
     command: /start-celeryworker
@@ -86,12 +92,12 @@ services:
   celerybeat:
     <<: *django
     image: {{ cookiecutter.project_slug }}_local_celerybeat
-    container_name: {{ cookiecutter.project_slug}}_celerybeat
+    container_name: {{ cookiecutter.project_slug }}_local_celerybeat
     depends_on:
-      - {{ cookiecutter.project_slug}}_redis
-      - {{ cookiecutter.project_slug}}_postgres
+      - redis
+      - postgres
       {%- if cookiecutter.use_mailhog == 'y' %}
-      - {{ cookiecutter.project_slug}}_mailhog
+      - mailhog
       {%- endif %}
     ports: []
     command: /start-celerybeat
@@ -99,7 +105,7 @@ services:
   flower:
     <<: *django
     image: {{ cookiecutter.project_slug }}_local_flower
-    container_name: {{ cookiecutter.project_slug}}_flower
+    container_name: {{ cookiecutter.project_slug }}_local_flower
     ports:
       - "5555:5555"
     command: /start-flower
@@ -112,9 +118,9 @@ services:
       context: .
       dockerfile: ./compose/local/node/Dockerfile
     image: {{ cookiecutter.project_slug }}_local_node
-    container_name: {{ cookiecutter.project_slug}}_node
+    container_name: {{ cookiecutter.project_slug }}_local_node
     depends_on:
-      - {{ cookiecutter.project_slug}}_django
+      - django
     volumes:
       - .:/app:z
       # http://jdlm.info/articles/2016/03/06/lessons-building-node-app-docker.html

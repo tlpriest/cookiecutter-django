@@ -338,7 +338,13 @@ MailHog
 .ipython/
 {%- endif %}
 
-### Bespoke
+{%- if cookiecutter.js_task_runner == 'Gulp' %}
+project.css
+project.min.css
+vendors.js
+*.min.js
+{%- endif %}
 
-.idea/  # copy the starter
+### Bespoke
 tmp/
+.tox/

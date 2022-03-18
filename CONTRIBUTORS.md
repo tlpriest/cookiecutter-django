@@ -132,6 +132,13 @@ Listed in alphabetical order.
     <td>Qoyyuum</td>
   </tr>
   <tr>
+    <td>Abdullah Adeel</td>
+    <td>
+      <a href="https://github.com/mabdullahadeel">mabdullahadeel</a>
+    </td>
+    <td>abdadeel_</td>
+  </tr>
+  <tr>
     <td>Adam Bogdał</td>
     <td>
       <a href="https://github.com/bogdal">bogdal</a>
@@ -279,6 +286,13 @@ Listed in alphabetical order.
     <td></td>
   </tr>
   <tr>
+    <td>Artur Barseghyan</td>
+    <td>
+      <a href="https://github.com/barseghyanartur">barseghyanartur</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
     <td>AsheKR</td>
     <td>
       <a href="https://github.com/ashekr">ashekr</a>
@@ -349,6 +363,13 @@ Listed in alphabetical order.
     <td></td>
   </tr>
   <tr>
+    <td>Bogdan Mateescu</td>
+    <td>
+      <a href="https://github.com/mateesville93">mateesville93</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
     <td>Bouke Haarsma</td>
     <td>
       <a href="https://github.com/"></a>
@@ -387,6 +408,13 @@ Listed in alphabetical order.
     <td>Catherine Devlin</td>
     <td>
       <a href="https://github.com/catherinedevlin">catherinedevlin</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Cebrail Yılmaz</td>
+    <td>
+      <a href="https://github.com/b1sar">b1sar</a>
     </td>
     <td></td>
   </tr>
@@ -636,6 +664,13 @@ Listed in alphabetical order.
     <td></td>
   </tr>
   <tr>
+    <td>Douglas</td>
+    <td>
+      <a href="https://github.com/douglascdev">douglascdev</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
     <td>Duda Nogueira</td>
     <td>
       <a href="https://github.com/dudanogueira">dudanogueira</a>
@@ -720,6 +755,13 @@ Listed in alphabetical order.
     <td></td>
   </tr>
   <tr>
+    <td>Fuzzwah</td>
+    <td>
+      <a href="https://github.com/Fuzzwah">Fuzzwah</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
     <td>Gabriel Mejia</td>
     <td>
       <a href="https://github.com/elgartoinf">elgartoinf</a>
@@ -737,6 +779,13 @@ Listed in alphabetical order.
     <td>Garry Polley</td>
     <td>
       <a href="https://github.com/garrypolley">garrypolley</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>ghazi-git</td>
+    <td>
+      <a href="https://github.com/ghazi-git">ghazi-git</a>
     </td>
     <td></td>
   </tr>
@@ -835,6 +884,13 @@ Listed in alphabetical order.
     <td>Ian Lee</td>
     <td>
       <a href="https://github.com/IanLee1521">IanLee1521</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>innicoder</td>
+    <td>
+      <a href="https://github.com/innicoder">innicoder</a>
     </td>
     <td></td>
   </tr>
@@ -940,6 +996,13 @@ Listed in alphabetical order.
     <td>Jonathan Thompson</td>
     <td>
       <a href="https://github.com/nojanath">nojanath</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Jorge Valdez</td>
+    <td>
+      <a href="https://github.com/jorgeavaldez">jorgeavaldez</a>
     </td>
     <td></td>
   </tr>
@@ -1329,6 +1392,13 @@ Listed in alphabetical order.
     <td></td>
   </tr>
   <tr>
+    <td>Pedro Campos</td>
+    <td>
+      <a href="https://github.com/pcampos119104">pcampos119104</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
     <td>Peter Bittner</td>
     <td>
       <a href="https://github.com/bittner">bittner</a>
@@ -1427,6 +1497,13 @@ Listed in alphabetical order.
     <td></td>
   </tr>
   <tr>
+    <td>Ryan Fitch</td>
+    <td>
+      <a href="https://github.com/ryfi">ryfi</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
     <td>Sam Collins</td>
     <td>
       <a href="https://github.com/MightySCollins">MightySCollins</a>
@@ -1518,6 +1595,13 @@ Listed in alphabetical order.
     <td></td>
   </tr>
   <tr>
+    <td>Thibault J.</td>
+    <td>
+      <a href="https://github.com/thibault">thibault</a>
+    </td>
+    <td>thibault</td>
+  </tr>
+  <tr>
     <td>Théo Segonds</td>
     <td>
       <a href="https://github.com/show0k">show0k</a>
@@ -1602,6 +1686,13 @@ Listed in alphabetical order.
     <td>highcenburg</td>
   </tr>
   <tr>
+    <td>Vikas Yadav</td>
+    <td>
+      <a href="https://github.com/vik-y">vik-y</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
     <td>Vitaly Babiy</td>
     <td>
       <a href="https://github.com/"></a>
@@ -1635,6 +1726,13 @@ Listed in alphabetical order.
       <a href="https://github.com/goldhand">goldhand</a>
     </td>
     <td>g01dhand</td>
+  </tr>
+  <tr>
+    <td>Will Gordon</td>
+    <td>
+      <a href="https://github.com/wgordon17">wgordon17</a>
+    </td>
+    <td></td>
   </tr>
   <tr>
     <td>William Archinal</td>
