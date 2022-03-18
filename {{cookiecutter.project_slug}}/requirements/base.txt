@@ -1,5 +1,5 @@
 pytz==2021.3  # https://github.com/stub42/pytz
-python-slugify==6.1.0  # https://github.com/un33k/python-slugify
+python-slugify==6.1.1  # https://github.com/un33k/python-slugify
 Pillow==9.0.1  # https://github.com/python-pillow/Pillow
 {%- if cookiecutter.use_compressor == "y" %}
 {%- if cookiecutter.windows == 'y' and cookiecutter.use_docker == 'n' %}
@@ -45,7 +45,7 @@ django-redis==5.2.0  # https://github.com/jazzband/django-redis
 djangorestframework==3.13.1  # https://github.com/encode/django-rest-framework
 django-cors-headers==3.11.0 # https://github.com/adamchainz/django-cors-headers
 # DRF-spectacular for api documentation
-drf-spectacular==0.21.2
+drf-spectacular==0.21.2  # https://github.com/tfranzel/drf-spectacular 
 {%- endif %}
 
 django-cachalot==2.5.0

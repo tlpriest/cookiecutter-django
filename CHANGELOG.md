@@ -3,6 +3,60 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 <!-- GENERATOR_PLACEHOLDER -->
 
+## 2022.03.14
+
+### Fixed
+- Fix broken link in README of generated projects ([#3634](https://github.com/cookiecutter/cookiecutter-django/pull/3634))
+
+## 2022.03.13
+
+### Changed
+- Add DRF spectacular link in requirements ([#3630](https://github.com/cookiecutter/cookiecutter-django/pull/3630))
+
+## 2022.03.09
+
+### Changed
+- Fix a few typos in the documentation ([#3625](https://github.com/cookiecutter/cookiecutter-django/pull/3625))
+
+## 2022.03.08
+
+### Updated
+- Update sentry-sdk to 1.5.7 ([#3624](https://github.com/cookiecutter/cookiecutter-django/pull/3624))
+
+## 2022.03.03
+
+### Updated
+- Upgrade actions/setup-python to v3 ([#3621](https://github.com/cookiecutter/cookiecutter-django/pull/3621))
+
+## 2022.03.02
+
+### Updated
+- Bump actions/checkout from 2 to 3 ([#3619](https://github.com/cookiecutter/cookiecutter-django/pull/3619))
+
+## 2022.03.01
+
+### Updated
+- Bump actions/setup-python from 2 to 3 ([#3617](https://github.com/cookiecutter/cookiecutter-django/pull/3617))
+- Bump peter-evans/create-pull-request from 3.13.0 to 3.14.0 ([#3618](https://github.com/cookiecutter/cookiecutter-django/pull/3618))
+
+## 2022.02.28
+
+### Updated
+- Update python-slugify to 6.1.1 ([#3615](https://github.com/cookiecutter/cookiecutter-django/pull/3615))
+- Bump peter-evans/create-pull-request from 3.12.1 to 3.13.0 ([#3616](https://github.com/cookiecutter/cookiecutter-django/pull/3616))
+
+## 2022.02.25
+
+### Updated
+- Bump actions/setup-node from 2 to 3 ([#3614](https://github.com/cookiecutter/cookiecutter-django/pull/3614))
+
+## 2022.02.24
+
+### Updated
+- Update django-allauth to 0.49.0 ([#3613](https://github.com/cookiecutter/cookiecutter-django/pull/3613))
+- Update sentry-sdk to 1.5.6 ([#3611](https://github.com/cookiecutter/cookiecutter-django/pull/3611))
+- Update python-slugify to 6.1.0 ([#3612](https://github.com/cookiecutter/cookiecutter-django/pull/3612))
+
 ## 2022.02.21
 
 ### Changed
