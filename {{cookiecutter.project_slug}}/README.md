@@ -58,7 +58,7 @@ Moved to [settings](http://cookiecutter-django.readthedocs.io/en/latest/settings
 
 -   To create a **normal user account**, just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.
 
--   To create an **superuser account**, use this command:
+-   To create a **superuser account**, use this command:
 
         $ python manage.py createsuperuser
 
@@ -84,7 +84,7 @@ To run the tests, check your test coverage, and generate an HTML coverage report
 
 ### Live reloading and Sass CSS compilation
 
-Moved to [Live reloading and SASS compilation](http://cookiecutter-django.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html).
+Moved to [Live reloading and SASS compilation](https://cookiecutter-django.readthedocs.io/en/latest/developing-locally.html#sass-compilation-live-reloading).
 
 {%- if cookiecutter.use_celery == "y" %}
 
